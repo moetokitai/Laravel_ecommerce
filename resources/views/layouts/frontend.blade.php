@@ -59,12 +59,7 @@
 @include('includes/footer')
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
-<script>
-    @if(Session::has('success'))
-        toastr.success("{{Session::get('success')}}")
-    @endif
-</script>
+
 <script src="{{asset('app/js/jquery-2.1.4.min.js')}}"></script>
 <script src="{{asset('app/js/crum-mega-menu.js')}}"></script>
 <script src="{{asset('app/js/swiper.jquery.min.js')}}"></script>
@@ -75,6 +70,13 @@
 <script src="{{asset('app/js/velocity.min.js')}}"></script>
 <script src="{{asset('app/js/ScrollMagic.min.js')}}"></script>
 <script src="{{asset('app/js/animation.velocity.min.js')}}"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+<script>
+    @if(Session::has('success'))
+        toastr.success("{{Session::get('success')}}")
+    @endif
+</script>
 
 <!-- ...end JS Script -->
 

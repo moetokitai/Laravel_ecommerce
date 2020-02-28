@@ -26,7 +26,7 @@
     <!--External fonts-->
 
     <link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
-
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 </head>
 
 
@@ -59,7 +59,12 @@
 @include('includes/footer')
 
 
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+<script>
+    @if(Session::has('success'))
+    toastr.success("{{Session::get('success'}}")
+    @endif
+</script>
 <script src="{{asset('app/js/jquery-2.1.4.min.js')}}"></script>
 <script src="{{asset('app/js/crum-mega-menu.js')}}"></script>
 <script src="{{asset('app/js/swiper.jquery.min.js')}}"></script>

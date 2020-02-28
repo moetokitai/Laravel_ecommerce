@@ -30,6 +30,8 @@ class CheckoutController extends Controller
         'source'=>$token,
         ]);
 
+        Session::flash('success','Purchased successfully');
+
 
         Cart::destroy();
 

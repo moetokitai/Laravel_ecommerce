@@ -62,7 +62,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 <script>
     @if(Session::has('success'))
-    toastr.success("{{Session::get('success'}}")
+    toastr.success("{{Session::get('success')}}")
     @endif
 </script>
 <script src="{{asset('app/js/jquery-2.1.4.min.js')}}"></script>
